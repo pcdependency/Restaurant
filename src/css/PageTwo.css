@@ -1,0 +1,123 @@
+.pageTwoContainer {
+  height: 100%;
+  width: 100%;
+  padding: 2vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 2vw;
+  color: white;
+}
+
+/* FIRST CONTAINER ------------- */
+
+.pageTwoVidColsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.pageTwoVidColContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageTwoVidColContainer > video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: ease-in-out 0.5s;
+  position: absolute;
+  filter: brightness(0.7) saturate(0.7) grayscale(0.5);
+}
+
+.pageTwoVidColContainer:hover > video {
+  filter: none;
+  cursor: pointer;
+}
+
+/* SECOND CONTAINER ------------- */
+
+.pageTwoDetailsContainer {
+  display: grid;
+  grid-template-areas: "a a b c";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2vw;
+}
+
+.pageTwoDetailsMapContainer {
+  grid-area: a;
+  background-color: rgba(20, 20, 20, 0.75);
+  border-radius: 0.5vh;
+}
+
+.pageTwoInfoContainer,
+.pageTwoInfoStaffContainer {
+  background-color: rgba(20, 20, 20, 0.75);
+  border-radius: 0.5vh;
+  padding: 2vw;
+}
+
+.pageTwoInfoContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+.pageTwoInfoContainer > .pageTwoInfoSectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pageTwoInfoContainer > .pageTwoInfoSectionContainer > .title {
+  font-size: min(max(16px, 2vw), 70px);
+  font-weight: bold;
+  margin-bottom: min(max(2px, 0vw), 20px) !important;
+}
+
+.pageTwoInfoContainer > .pageTwoInfoSectionContainer > .value {
+  font-size: min(max(10px, 1vw), 30px);
+  margin-bottom: min(max(5px, 0.3vw), 10px) !important;
+}
+
+.pageTwoInfoContainer > .pageTwoInfoSectionContainer > img {
+  height: min(max(30px, 40%), 80px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 750px) {
+  .pageTwoContainer {
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 1fr;
+  }
+
+  .pageTwoDetailsContainer {
+    grid-template-areas: "a a" "b c";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .pageTwoDetailsMapContainer {
+    grid-area: a;
+  }
+
+  .pageTwoInfoContactContainer {
+  }
+
+  .pageTwoInfoStaffContainer {
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .pageTwoInfoContainer > .pageTwoInfoSectionContainer > img {
+    display: none;
+  }
+}

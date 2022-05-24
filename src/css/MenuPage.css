@@ -1,0 +1,7 @@
+.menuPageContainer {
+  transition: ease-in-out 0.3s;
+  aspect-ratio: 1/1.4142;
+  cursor: pointer;
+  pointer-events: all;
+  border-radius: 0.25vh;
+}

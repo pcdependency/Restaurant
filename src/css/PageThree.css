@@ -1,0 +1,72 @@
+.pageThreeContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.threeVideo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(0.2) brightness(0.5) saturate(0.8) blur(2px);
+  transform: scale(1.5);
+}
+
+.threeBg {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.pageThreeContentContainer {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 4vw;
+  gap: 4vw;
+}
+
+.pageThreeMenusContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 200vh;
+  pointer-events: none;
+}
+
+.pageThreeMenusContainer:nth-of-type(1) {
+}
+
+.pageThreeMenusContainer:nth-of-type(2) {
+}
+
+.pageThreeMenusContainer:nth-of-type(2) > p {
+  font-weight: bold;
+  color: white;
+  font-size: min(max(50px, 5vw), 200px);
+}
+
+.pageThreeMenusContainer:nth-of-type(2) > .menusRow {
+  margin: 2vh;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 2vw;
+}
+
+@media screen and (max-width: 750px) {
+  .pageThreeContentContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}

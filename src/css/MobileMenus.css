@@ -1,0 +1,63 @@
+.mobileMenusContainer {
+  position: relative;
+  pointer-events: all;
+}
+
+.mobileMenusContainer > .content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mobileMenusContainer > .content > p {
+  transition: ease-in-out 0.2s;
+  font-weight: bold;
+  color: white;
+  font-size: min(max(20px, 15vw), 60px);
+}
+
+.mobileMenusContainer > .content > .button {
+  border-radius: 0.5vh;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.mobileMenusContainer > .tri {
+  transition: ease-in-out 0.2s;
+  position: absolute;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.mobileMenusContainer > .content > .closeBtn {
+  transition: ease-in-out 0.3s;
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(10, 10, 10);
+  border: 1px solid white;
+  color: white;
+}
+
+.carouselImg {
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  height: 50vh;
+  width: 85vw;
+}
+
+.openImg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 4vw;
+}

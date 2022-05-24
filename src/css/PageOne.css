@@ -1,0 +1,67 @@
+.pageOneContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.titleContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.titleContainer > p {
+  font-size: min(max(0px, 14vh), 300px);
+  font-weight: bold;
+  color: rgba(20, 20, 20, 0.85);
+  line-height: 0.8;
+  transition: ease-in-out 0.3s;
+}
+
+.titleContainer > button {
+  position: relative;
+  height: 6vh;
+  width: 25vh;
+  font-size: min(max(0px, 2vh), 30px);
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 0.5vh;
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  border: none;
+}
+
+.titleContainer > button:hover {
+  background-color: rgba(20, 20, 20, 1);
+}
+
+.titleContainer > button:active {
+  height: 6.5vh;
+  width: 25.5vh;
+}
+
+.pBannerImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.pBannerImg.clear {
+  touch-action: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 450px) {
+  .titleContainer > p {
+    font-size: min(max(0px, 10vh), 200px);
+  }
+}
